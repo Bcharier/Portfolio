@@ -6,11 +6,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta description="Portfolio de Baptiste Charier, développeur Front End" />
     <link rel="stylesheet" href="CSS/style.css" />
+    <link rel="stylesheet" type="text/css" href="/icons//css/all.css" />
     <title>Portfolio Baptiste Charier</title>
   </head>
   <body>
+    <!-- Bouton On/Off -->
+    <div id="switch-container">
+      <button id="switch-on">
+        <i id="icon-switch-on" class="fas fa-toggle-off switch"></i>
+      </button>
+      <button id="switch-off">
+        <i id="icon-switch-off" class="fas fa-toggle-on switch"></i>
+      </button>
+    </div>
+    <!-- Contenant de la page entière -->
+    <div id="page-container">
+      <!-- Header -->
+      <header>
+        <div id="name">
+          <p id="name-delay0">Baptiste</p>
+          <p id="name-delay1">Charier</p>
+        </div>
+        <!-- Liens vers réseaux sociaux -->
+        <div id="social-links">
+          <a href="https://github.com/Bcharier" target="_blank" rel="noopener noreferrer"
+            ><i id="github-link" class="fab fa-github-square"></i
+          ></a>
+          <a href="https://www.linkedin.com/in/baptiste-charier/" target="_blank" rel="noopener noreferrer"
+            ><i id="linkedin-link" class="fab fa-linkedin"></i
+          ></a>
+        </div>
+      </header>
+      <!-- Job description -->
+      <section id="job-description">
+        <h2 id="front-end">Front End Developper</h2>
+        <h2 id="alternance">A la recherche d'une alternance</h2>
+      </section>
 
-    
+      <!-- Description du profil -->
+      <section id="description">
+        <p>
+          En cours de reconversion professionnelle, je suis à la recherche d'une
+          entreprise pour m'accompagner dans la validation de ma formation de
+          developpeur frontend chez OpenClassrooms sur un contrat
+          d'apprentissage ou de professionnalisation.
+        </p>
+      </section>
 
+      <!-- Flèches pour scroll -->
+      <a href="#"><i id="arrow-scroll" class="fas fa-angle-double-down"></i></a>
+
+      <!-- Présentation des projets -->
+      <section id="project-presentation">
+        <div class="project">Reservia</div>
+        <div class="project">OhMyFood</div>
+        <div class="project">GameOn</div>
+        <div class="project">FishEye</div>
+      </section>
+    </div>
+    <script src="Js/switch.js"></script>
   </body>
 </html>

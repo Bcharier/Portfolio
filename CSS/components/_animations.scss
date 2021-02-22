@@ -1,0 +1,156 @@
+@import "../utils/mixins";
+
+// Clignotement des icones sociales
+@keyframes socials-flash {
+  0%,
+  45% {
+    color: $colour-background;
+    background-color: $colour-secondary;
+    font-size: 3rem;
+    margin: 1rem;
+    text-shadow: none;
+    background-clip: text;
+    -webkit-background-clip: text;
+    @include neon-text-shadow;
+  }
+
+  28% {
+    color: $colour-background;
+    background-color: $colour-secondary;
+    font-size: 3rem;
+    margin: 1rem;
+    text-shadow: none;
+    background-clip: text;
+    -webkit-background-clip: text;
+  }
+
+  16%,
+  32% {
+    color: $colour-background;
+    background-color: $colour-background;
+    text-shadow: none;
+    background-clip: text;
+    -webkit-background-clip: text;
+  }
+
+  100% {
+    color: $colour-background;
+    background-color: $colour-secondary;
+    @include neon-text-shadow;
+    background-clip: text;
+    -webkit-background-clip: text;
+  }
+}
+
+.socials-appear-delay0 {
+  animation: socials-flash 2500ms 2500ms forwards;
+}
+
+.socials-appear-delay1 {
+  animation: socials-flash 2800ms 2800ms forwards;
+}
+
+// Clignotement du nom
+@keyframes title-flash {
+  0%,
+  12%,
+  16%,
+  24%,
+  38%,
+  100% {
+    color: $colour-primary;
+    text-shadow: none;
+    opacity: 1;
+  }
+
+  10%,
+  13%,
+  21%,
+  34%,
+  70% {
+    color: $colour-background;
+    text-shadow: none;
+    opacity: 1
+  }
+
+  100% {
+    @include neon-text-shadow;
+  }
+}
+
+.name-appear-delay0 {
+  animation: title-flash 3500ms 300ms forwards;
+}
+
+.name-appear-delay1 {
+  animation: title-flash 3700ms 700ms forwards;
+}
+
+// Apparition des éléments
+@keyframes item-appear {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.item-appear-delay0 {
+  animation: item-appear 800ms 4500ms forwards;
+}
+
+.item-appear-delay1 {
+  animation: item-appear 700ms 5000ms forwards;
+}
+
+// Animation flèches pour scroll
+@keyframes scroll-flash {
+  0% {
+    opacity: 0.5;
+  }
+
+  50% {
+    @include neon-text-shadow;
+    opacity: 1;
+  }
+
+  100% {
+    text-shadow: none;
+    opacity: 0.5;
+  }
+}
+
+.scroll-appear {
+  animation: scroll-flash 3500ms 7000ms infinite;
+}
+
+// Animation bouton On/Off
+
+@keyframes switch-on {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes switch-off {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    background-color: $colour-secondary;
+  }
+}
+
+.switch-on {
+  animation: switch-on 300ms forwards;
+}
+
+.switch-off {
+  animation: switch-off 300ms forwards;
+}

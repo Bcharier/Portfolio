@@ -1,1 +1,134 @@
 @import "./base/font";
+@import "./utils/variables";
+@import "./components/animations";
+@import "./layouts/large";
+@import "./utils/mixins";
+
+body {
+  background-color: $colour-background;
+  font-family: "strong";
+  scroll-behavior: smooth;
+}
+
+#page-container {
+  opacity: 0;
+}
+
+header {
+  display: flex;
+  flex-flow: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 10%;
+
+  #name {
+    display: flex;
+    color: $colour-primary;
+    font-size: 5rem;
+    width: 80%;
+    font-family: "strong";
+
+    #name-delay0 {
+      opacity: 0;
+    }
+
+    #name-delay1 {
+      opacity: 0;
+    }
+
+    p {
+      margin-right: 3rem;
+    }
+  }
+
+  #social-links {
+    display: flex;
+    align-items: center;
+  }
+
+  i {
+    color: $colour-background;
+    background-color: $colour-background;
+    font-size: 3rem;
+    margin: 1rem;
+  }
+}
+
+// Bouton On/Off
+#switch-container {
+  display: flex;
+  position: absolute;
+  top: 2rem;
+  left: 50%;
+  z-index: 10;
+
+  .switch {
+    position: absolute;
+    left: 50%;
+    color: $colour-primary;
+    cursor: pointer;
+    font-size: 3rem;
+  }
+
+  // Retirer les caractéristiques par défaut des boutons
+  #switch-on {
+    border: none;
+    background: none;
+  }
+
+  #switch-off {
+    border: none;
+    background: none;
+    opacity: 0;
+  }
+}
+
+#job-description {
+  display: flex;
+  align-items: center;
+  margin: 0 10%;
+  opacity: 0;
+}
+
+h2 {
+  color: $colour-primary;
+  font-size: 3rem;
+  @include neon-text-shadow;
+}
+
+#front-end {
+  margin-right: 20rem;
+}
+
+#alternance {
+  font-size: 2.5rem;
+  display: flex;
+  text-align: center;
+}
+
+#description {
+  margin: 3rem 10%;
+  width: 80%;
+  opacity: 0;
+
+  p {
+    color: $colour-primary;
+    border: solid 0.2rem $colour-secondary;
+    white-space: wrap;
+    font-size: 1.7rem;
+    font-weight: 200;
+    padding: 2.5rem;
+    text-align: justify;
+    white-space: wrap;
+    @include neon-box-shadow;
+  }
+}
+
+#arrow-scroll {
+  opacity: 0;
+  position: absolute;
+  right: 10rem;
+  bottom: 5rem;
+  font-size: 5rem;
+  @include neon-arrow-scroll;
+}

@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta description="Portfolio de Baptiste Charier, développeur Front End" />
     <link rel="stylesheet" href="CSS/style.css" />
     <link rel="stylesheet" type="text/css" href="/icons//css/all.css" />
     <title>Portfolio Baptiste Charier</title>
@@ -24,15 +23,21 @@
       <!-- Header -->
       <header>
         <div id="name">
-          <p id="name-delay0">Baptiste</p>
-          <p id="name-delay1">Charier</p>
+          <h1 id="name-delay0">Baptiste</h1>
+          <h1 id="name-delay1">Charier</h1>
         </div>
         <!-- Liens vers réseaux sociaux -->
         <div id="social-links">
-          <a href="https://github.com/Bcharier" target="_blank" rel="noopener noreferrer"
+          <a
+            href="https://github.com/Bcharier"
+            target="_blank"
+            rel="noopener noreferrer"
             ><i id="github-link" class="fab fa-github-square"></i
           ></a>
-          <a href="https://www.linkedin.com/in/baptiste-charier/" target="_blank" rel="noopener noreferrer"
+          <a
+            href="https://www.linkedin.com/in/baptiste-charier/"
+            target="_blank"
+            rel="noopener noreferrer"
             ><i id="linkedin-link" class="fab fa-linkedin"></i
           ></a>
         </div>
@@ -44,24 +49,98 @@
       </section>
 
       <!-- Description du profil -->
-      <section id="description">
+      <div id="description">
         <p>
           En cours de reconversion professionnelle, je suis à la recherche d'une
           entreprise pour m'accompagner dans la validation de ma formation de
           developpeur frontend chez OpenClassrooms sur un contrat
           d'apprentissage ou de professionnalisation.
         </p>
-      </section>
+      </div>
 
       <!-- Flèches pour scroll -->
       <a href="#"><i id="arrow-scroll" class="fas fa-angle-double-down"></i></a>
 
       <!-- Présentation des projets -->
       <section id="project-presentation">
-        <div class="project">Reservia</div>
-        <div class="project">OhMyFood</div>
-        <div class="project">GameOn</div>
-        <div class="project">FishEye</div>
+        <!-- Reservia -->
+        <div class="project">
+          <a href="#">
+          <h3>Reservia</h3>
+          <div class="description-project">
+            <img
+              src="images/Reservia.PNG"
+              alt="Image de la page d'accueil du site Réservia"
+            />
+            <div class="icon-project">
+              <i class="fab fa-html5 icon-langage"></i>
+              <i class="fab fa-css3-alt icon-langage"></i>
+            </div>
+            <p class="text-project">
+              Création de la page d'accueil d'un site de locations de logements
+            </p>
+          </div>
+        </a>
+        </div>
+    
+        <!-- OhMyFood -->
+        <div class="project">
+          <a href="#">
+          <h3>OhMyFood</h3>
+          <div class="description-project">
+            <img
+              src="images/OhMyFood.PNG"
+              alt="Image de la page d'accueil du site OhMyFood"
+            />
+            <div class="icon-project">
+              <i class="fab fa-html5 icon-langage"></i>
+              <i class="fab fa-sass icon-langage"></i>
+            </div>
+            <p class="text-project">
+              Création d'une application web pour réserver ses repas au
+              restaurant en ligne
+            </p>
+          </div>
+        </a>
+        </div>
+
+        <!-- GameOn -->
+        <div class="project">
+          <a href="#">
+          <h3>GameOn</h3>
+          <div class="description-project">
+            <img src="images/GameOn.PNG" alt="Image du site GameOn" />
+            <div class="icon-project">
+              <i class="fab fa-html5 icon-langage"></i>
+              <i class="fab fa-css3-alt icon-langage"></i>
+              <i class="fab fa-js-square icon-langage"></i>
+            </div>
+            <p class="text-project">
+              Réalisation d'un formulaire de contact avec validation des champs
+              pour un site d'organisation de tournois de jeux-vidéo
+            </p>
+          </div>
+        </a>
+        </div>
+    
+        <!-- FishEye -->
+        <div class="project">
+          <a href="#">
+          <h3>FishEye</h3>
+          <div class="description-project">
+            <div class="icon-project">
+              <i class="fab fa-html5 icon-langage"></i>
+              <i class="fab fa-sass icon-langage"></i>
+              <i class="fab fa-js-square icon-langage"></i>
+            </div>
+            <p class="text-project">
+              Création d'une plateforme de promotion de photographes (En cours
+              de réalisation)
+            </p>
+          </div>
+        </a>
+        </div>
+      
       </section>
     </div>
     <script src="Js/switch.js"></script>

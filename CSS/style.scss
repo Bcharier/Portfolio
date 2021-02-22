@@ -10,9 +10,9 @@ body {
   scroll-behavior: smooth;
 }
 
-#page-container {
-  opacity: 0;
-}
+// #page-container {
+//   opacity: 0;
+// }
 
 header {
   display: flex;
@@ -24,7 +24,6 @@ header {
   #name {
     display: flex;
     color: $colour-primary;
-    font-size: 5rem;
     width: 80%;
     font-family: "strong";
 
@@ -36,8 +35,9 @@ header {
       opacity: 0;
     }
 
-    p {
+    h1 {
       margin-right: 3rem;
+      font-size: 5rem;
     }
   }
 
@@ -131,4 +131,41 @@ h2 {
   bottom: 5rem;
   font-size: 5rem;
   @include neon-arrow-scroll;
+}
+
+// Présentation des projets
+
+#project-presentation {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0 10%;
+
+.project {
+  color: $colour-primary;
+  display: flex;
+  flex-flow: row wrap;
+  border: solid 0.2rem $colour-secondary;
+  @include neon-box-shadow;
+  margin: 5rem auto;
+  width: 25%;
+  padding: 2rem;
+  text-overflow: ellipsis;
+
+  a:hover {
+    transform: scale(2, 1)
+  }
+
+  h3 {
+    width: 100%;
+  }
+
+  .description-project {
+    width: 30%;
+  }
+
+  .description-project img {
+    width: 100%;
+    object-fit: cover;
+  }
+}
 }

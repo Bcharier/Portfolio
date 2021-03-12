@@ -58,7 +58,7 @@
   24%,
   38%,
   100% {
-    color: $colour-primary;
+    color: $colour-secondary;
     text-shadow: none;
     opacity: 1;
   }
@@ -70,11 +70,11 @@
   70% {
     color: $colour-background;
     text-shadow: none;
-    opacity: 1
+    opacity: 1;
   }
 
   100% {
-    @include neon-text-shadow;
+    @include neon-text-shadow-light;
   }
 }
 
@@ -84,6 +84,21 @@
 
 .name-appear-delay1 {
   animation: title-flash 3700ms 700ms forwards;
+}
+
+@keyframes small-title-appear {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+    @include neon-text-shadow-light;
+  }
+}
+
+.small-title-appear {
+  animation: small-title-appear 800ms 4500ms forwards;
 }
 
 // Apparition des éléments
@@ -126,6 +141,10 @@
   animation: scroll-flash 3500ms 7000ms infinite;
 }
 
+.scroll-appear-again {
+  animation: scroll-flash 3500ms 1000ms infinite;
+}
+
 // Animation bouton On/Off
 
 @keyframes switch-on {
@@ -153,4 +172,35 @@
 
 .switch-off {
   animation: switch-off 300ms forwards;
+}
+
+// Apparition projets
+
+@keyframes projects-appear {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.projects-appear {
+  animation: projects-appear 700ms forwards;
+}
+
+// Animation changement de langue
+
+@keyframes lang-switch {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.lang-switch {
+  animation: lang-switch 1200ms forwards;
 }

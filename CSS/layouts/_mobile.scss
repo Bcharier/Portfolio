@@ -1,0 +1,36 @@
+@media only screen and (max-width: 430px) {
+
+
+    body {
+        width: 50%;
+        overflow: hidden;
+    }
+    #switch-container {
+        display: none;
+    }
+
+    header {
+        padding: 0;
+
+        #lang-choice {
+            display: none;
+        }
+        nav {
+            width: 100%;
+
+            ul {
+                margin: 0;
+                li {
+                    border: solid red;
+                    font-size: 0.9rem;
+                    margin: 0 3%;
+
+                    a {
+                        display: inline-block;
+                        width: 6rem;                    }
+                }
+
+            }
+        }
+    }
+}

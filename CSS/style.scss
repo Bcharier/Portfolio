@@ -1,0 +1,355 @@
+@import "./base/font";
+@import "./utils/variables";
+@import "./components/animations";
+@import "./utils/mixins";
+
+html {
+  background-color: $colour-background;
+  font-family: "neuropolitical";
+  scroll-behavior: smooth;
+  margin: 0;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $colour-secondary;
+  margin-top: 15rem;
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+  left: 0;
+  height: 5rem;
+  width: 100%;
+  margin: 0;
+}
+
+header {
+  display: flex;
+  flex-flow: wrap;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $colour-background;
+  z-index: 3;
+  height: 5rem;
+  margin: 0 5%;
+  font-family: "good_times";
+
+  #lang-choice {
+    display: flex;
+    flex-flow: row;
+    opacity: 0;
+
+    .lang-option {
+      margin: 0 0.5rem;
+      cursor: pointer;
+      color: $colour-secondary;
+      font-size: 1.2rem;
+    }
+    .lang-option:hover {
+      @include neon-text-shadow;
+    }
+  }
+
+  nav {
+    opacity: 0;
+
+    ul {
+      list-style-type: none;
+      display: flex;
+      color: $colour-secondary;
+
+      li {
+        list-style-type: none;
+        margin: 0 1rem;
+        cursor: pointer;
+        font-size: 1.2rem;
+      }
+
+      a {
+        color: $colour-secondary;
+      }
+
+      li:hover {
+        @include neon-text-shadow;
+      }
+    }
+  }
+}
+
+#nav-responsive {
+  display: none;
+}
+
+.hamburger-menu {
+  display: none;
+}
+
+// Section titre
+
+#page-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-flow: row wrap;
+  margin: 5rem 5%;
+
+  #name {
+    display: flex;
+    color: $colour-secondary;
+
+    h1 {
+      margin: 0 3rem 0 0;
+      font-size: 3rem;
+      opacity: 0;
+    }
+  }
+
+  .social-links {
+    display: flex;
+    align-items: center;
+  }
+
+  i {
+    color: $colour-background;
+    font-size: 3rem;
+    margin: 1rem;
+  }
+
+  i:hover {
+    @include neon-arrow-scroll;
+  }
+
+  #front-end {
+    color: $colour-secondary;
+    font-size: 2rem;
+    opacity: 0;
+    width: 100%;
+  }
+}
+
+#job-description {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 5rem;
+  color: $colour-secondary;
+  font-size: 2rem;
+  text-align: center;
+  opacity: 0;
+}
+
+#description {
+  margin: 10%;
+  width: 80%;
+  opacity: 0;
+
+  p {
+    color: $colour-primary;
+    white-space: wrap;
+    font-size: 1.7rem;
+    font-weight: 200;
+    padding: 2.5rem;
+    text-align: justify;
+    white-space: wrap;
+    font-family: "neuropolX";
+  }
+}
+
+.arrow-scroll {
+  opacity: 0;
+  position: fixed;
+  right: 1vw;
+  bottom: 5rem;
+  font-size: 5rem;
+  @include neon-arrow-scroll;
+  cursor: pointer;
+  z-index: 10;
+}
+
+#arrow-scroll-up {
+  display: none;
+  transform: rotate(180deg);
+}
+
+// A propos de moi
+
+#about {
+  margin: 18rem 5% 5rem 5%;
+  color: $colour-primary;
+  padding-top: 5rem;
+  opacity: 0;
+
+  #about-title {
+    font-size: 3rem;
+    color: $colour-secondary;
+    margin-bottom: 6rem;
+  }
+
+  #about-description {
+    display: flex;
+    font-family: "neuropolX";
+    @include neon-box-shadow-secondary;
+    padding: 3rem;
+    font-size: 1.3rem;
+  }
+
+  img {
+    border-radius: 50%;
+    width: 15rem;
+    object-fit: cover;
+    margin-right: 3rem;
+  }
+}
+
+// Présentation des projets
+
+.separation {
+  margin: 7rem auto 0 auto;
+  width: 80%;
+  border: solid 0.1rem $colour-secondary;
+  @include neon-box-shadow-primary;
+}
+
+#project-presentation {
+  display: flex;
+  flex-flow: wrap column-reverse;
+  margin: 15rem 5% 5rem 5%;
+  opacity: 0;
+  padding-top: 5rem;
+
+  h2 {
+    font-size: 3rem;
+    color: $colour-secondary;
+    order: 1;
+    margin: 2rem auto;
+  }
+
+  .project {
+    display: flex;
+    flex-flow: column;
+    color: $colour-secondary;
+    margin: 3rem auto;
+
+    .project-header {
+      display: flex;
+      width: 95%;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0 3% 1rem 3%;
+
+      .project-github-link {
+        color: $colour-background;
+        font-size: 3rem;
+        @include neon-text-shadow;
+      }
+
+      .project-github-link:hover {
+        @include neon-arrow-scroll;
+      }
+
+      h3 {
+        font-size: 2rem;
+      }
+    }
+
+    .description-project {
+      display: flex;
+      width: 100%;
+    }
+
+    .description-project img {
+      width: 30rem;
+      object-fit: cover;
+      object-position: top;
+    }
+
+    .description-project img:hover {
+      @include neon-box-shadow-secondary;
+    }
+
+    .icon-project {
+      display: flex;
+
+      .icon-langage {
+        margin: 0 0.5rem;
+        font-size: 3rem;
+        color: $colour-background;
+        @include neon-text-shadow;
+        background-clip: text;
+        -webkit-background-clip: text;
+      }
+      .icon-js {
+        @include neon-text-shadow-js;
+        background-clip: text;
+        -webkit-background-clip: text;
+      }
+      .icon-html {
+        @include neon-text-shadow-html;
+        background-clip: text;
+        -webkit-background-clip: text;
+      }
+      .icon-css {
+        @include neon-text-shadow-css;
+        background-clip: text;
+        -webkit-background-clip: text;
+      }
+      .icon-sass {
+        @include neon-text-shadow-sass;
+        background-clip: text;
+        -webkit-background-clip: text;
+      }
+    }
+
+    .text-project {
+      margin-left: 2rem;
+      font-size: 1.2rem;
+      max-width: 50rem;
+    }
+  }
+}
+
+footer {
+  color: $colour-secondary;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  padding: 3rem;
+  margin-bottom: 5rem;
+  opacity: 0;
+
+  h2 {
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  #contact-info {
+    display: flex;
+
+    p {
+      cursor: pointer;
+      font-size: 2rem;
+      margin: 0 3rem;
+
+      a {
+        color: $colour-secondary;
+      }
+    }
+    p:hover {
+      @include neon-text-shadow;
+    }
+  }
+}
+
+@import "./layouts/mobile";
+@import "./layouts/large";
